@@ -408,7 +408,7 @@ const LandingPage = () => {
         style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.05)', backdropFilter: 'blur(15px)', position: 'sticky', top: 0, zIndex: 100, background: 'rgba(5, 7, 10, 0.8)' }}
       >
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          <img src={logoImg} alt="DLMC Logo" style={{ height: '55px', width: 'auto' }} />
+          <img src={logoImg} alt="Vertex Capital Logo" style={{ height: '55px', width: 'auto' }} />
         </div>
 
         {/* Desktop Navigation Link Container */}
@@ -1673,9 +1673,9 @@ const LandingPage = () => {
       <footer style={{ borderTop: '1px solid rgba(255, 255, 255, 0.05)', background: '#07090D', padding: '60px 40px 40px' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '40px', marginBottom: '40px' }}>
           <div>
-            <img src={logoImg} alt="DLMC Logo" style={{ height: '45px', width: 'auto', marginBottom: '10px' }} />
+            <img src={logoImg} alt="Vertex Capital Logo" style={{ height: '45px', width: 'auto', marginBottom: '10px' }} />
             <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginTop: '12px', lineHeight: '1.5' }}>
-              Decentralised Legacy Management Corporation is a decentralized blockchain platform built on BEP-20 smart contracts.
+              Vertex Capital is a decentralized blockchain platform built on BEP-20 smart contracts.
             </p>
           </div>
           <div>
