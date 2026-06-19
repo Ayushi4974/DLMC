@@ -92,7 +92,7 @@ export const Analytics = () => {
         <AntiGravityCard accent="#D4A017" depth={6} tilt={false} glow={true} style={{ padding: 0, height: 360, overflow: 'hidden' }}>
           <div className="responsive-card-inner" style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
             <h3 style={{ fontSize: '0.95rem', fontWeight: 700, color: GOLD_LIGHT, marginBottom: 20, flexShrink: 0 }}>
-              Circulating Supply: Mint vs Burn (DLMC)
+              Circulating Supply: Mint vs Burn (Vertex Capital)
             </h3>
             <div style={{ flex: 1, minHeight: 0 }}>
               <ResponsiveContainer width="100%" height="100%">

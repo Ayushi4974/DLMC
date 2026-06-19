@@ -81,7 +81,7 @@ export const Governance = () => {
         <motion.div variants={cardVariants}>
           <AntiGravityCard accent="#D4A017" depth={6} tilt={true} glow={true} style={{ padding: '20px' }}>
             <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>TOTAL VOTING WEIGHT</span>
-            <h3 style={{ fontSize: '1.6rem', fontWeight: 800, marginTop: 4, color: '#FFFFFF' }}>{stats.votingWeight.toLocaleString()} DLMC</h3>
+            <h3 style={{ fontSize: '1.6rem', fontWeight: 800, marginTop: 4, color: '#FFFFFF' }}>{stats.votingWeight.toLocaleString()} Vertex Capital</h3>
             <span style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', display: 'block', marginTop: 4 }}>Staked tokens weight</span>
           </AntiGravityCard>
         </motion.div>

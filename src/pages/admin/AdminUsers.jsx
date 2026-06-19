@@ -71,7 +71,7 @@ export const AdminUsers = () => {
                   <th>Username</th>
                   <th>Wallet Address</th>
                   <th>USDT Bal</th>
-                  <th>DLMC Bal</th>
+                  <th>Vertex Capital Bal</th>
                   <th>Rank</th>
                   <th>Actions</th>
                 </tr>
@@ -82,7 +82,7 @@ export const AdminUsers = () => {
                     <td>{u.username}</td>
                     <td style={{ fontFamily: 'var(--font-mono)', fontSize: '0.8rem' }}>{u.walletAddress}</td>
                     <td>${Number(u.usdtBalance).toFixed(2)}</td>
-                    <td>{Number(u.dlmcBalance).toFixed(2)} DLMC</td>
+                    <td>{Number(u.dlmcBalance).toFixed(2)} Vertex Capital</td>
                     <td style={{ fontWeight: '700' }}>{u.currentRank || "D0"}</td>
                     <td>
                       <button className="btn btn-secondary" style={{ padding: '4px 10px', fontSize: '0.75rem' }} onClick={() => {
@@ -121,7 +121,7 @@ export const AdminUsers = () => {
               </div>
 
               <div className="form-group">
-                <label className="form-label">DLMC Balance Override</label>
+                <label className="form-label">Vertex Capital Balance Override</label>
                 <input 
                   type="number" 
                   className="form-control" 

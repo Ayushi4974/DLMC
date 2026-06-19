@@ -1,5 +1,5 @@
 /**
- * BuyDLMC — Ultra-Premium Luxury Obsidian & Gold Purchase Interface
+ * BuyVertexCapital — Ultra-Premium Luxury Obsidian & Gold Purchase Interface
  *
  * Design spec:
  *  - Radial gradient backdrop: #111827 → #0B0F19 → #050505
@@ -7,7 +7,7 @@
  *  - Animated counter for token value / wallet balance
  *  - Inline MAX button, focus glow on input
  *  - Tokenomics breakdown with color-coded rows
- *  - DLMC Received highlight block in Champagne Gold
+ *  - Vertex Capital Received highlight block in Champagne Gold
  *  - Ghost Approve + gradient Buy CTA buttons
  *  - Anti-gravity lift via Framer Motion
  *  - Gold confetti burst on successful purchase
@@ -149,7 +149,7 @@ const PctBtn = ({ label, active, onClick }) => (
 /* ════════════════════════════════════════
    MAIN COMPONENT
    ════════════════════════════════════════ */
-export const BuyDLMC = () => {
+export const BuyVertexCapital = () => {
   const { authFetch }   = useWallet();
   const [usdtInput, setUsdtInput] = useState('');
   const [data,      setData]      = useState(null);
@@ -180,7 +180,7 @@ export const BuyDLMC = () => {
       const resData = await res.json();
       if (res.ok) {
         setTxState('success');
-        setTxMsg(`${resData.dlmcReceived?.toFixed(4) ?? estimatedDlmc.toFixed(4)} DLMC minted to your wallet!`);
+        setTxMsg(`${resData.dlmcReceived?.toFixed(4) ?? estimatedDlmc.toFixed(4)} Vertex Capital minted to your wallet!`);
         setUsdtInput('');
         fireConfetti();
         setTimeout(() => { setTxState(null); loadData(); }, 3500);
@@ -254,7 +254,7 @@ export const BuyDLMC = () => {
             WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
           }}>
-            Buy DLMC Token
+            Buy Vertex Capital Token
           </h2>
         </div>
         <div style={{
@@ -266,7 +266,7 @@ export const BuyDLMC = () => {
           maxWidth: '100%',
         }}>
           <p style={{ color: '#F8FAFC', fontSize: '0.88rem', lineHeight: 1.6, margin: 0 }}>
-            Mint utility DLMC tokens using USDT. The token price will <strong style={{ color: '#00E5A8' }}>increase 15%</strong> following each completed purchase cycle.
+            Mint utility Vertex Capital tokens using USDT. The token price will <strong style={{ color: '#00E5A8' }}>increase 15%</strong> following each completed purchase cycle.
           </p>
         </div>
       </motion.div>      {/* ── Top Stats Grid ── */}
@@ -344,7 +344,7 @@ export const BuyDLMC = () => {
                   Initiate Purchase Order
                 </h3>
                 <p style={{ fontSize: '0.78rem', color: '#64748B', marginTop: 4, marginBottom: 0 }}>
-                  Enter the amount of USDT you wish to exchange for utility DLMC tokens.
+                  Enter the amount of USDT you wish to exchange for utility Vertex Capital tokens.
                 </p>
               </div>
 
@@ -497,7 +497,7 @@ export const BuyDLMC = () => {
                   Approve
                 </motion.button>
 
-                {/* Buy DLMC — gradient primary button */}
+                {/* Buy Vertex Capital — gradient primary button */}
                 <motion.button
                   onClick={handleBuy}
                   disabled={!canBuy}
@@ -553,7 +553,7 @@ export const BuyDLMC = () => {
                   ) : (
                     <>
                       <Zap size={15} />
-                      Buy DLMC
+                      Buy Vertex Capital
                       <ChevronRight size={14} />
                     </>
                   )}
@@ -612,7 +612,7 @@ export const BuyDLMC = () => {
                 />
               </div>
 
-              {/* Net DLMC Received highlight block */}
+              {/* Net Vertex Capital Received highlight block */}
               <div style={{
                 background: 'rgba(224, 160, 30, 0.08)',
                 border: '1px solid rgba(224, 160, 30, 0.25)',
@@ -625,7 +625,7 @@ export const BuyDLMC = () => {
                   <div style={{ display: 'flex', alignItems: 'center', gap: 7 }}>
                     <Sparkles size={14} color={GOLD_LIGHT} />
                     <span style={{ fontSize: '0.85rem', color: GOLD_LIGHT, fontWeight: 700, textShadow: '0 0 8px rgba(244,208,111,0.2)' }}>
-                      Estimated DLMC Received
+                      Estimated Vertex Capital Received
                     </span>
                   </div>
                   <motion.span
@@ -642,7 +642,7 @@ export const BuyDLMC = () => {
                       fontFamily: FONT,
                     }}
                   >
-                    {estimatedDlmc.toFixed(4)} DLMC
+                    {estimatedDlmc.toFixed(4)} Vertex Capital
                   </motion.span>
                 </div>
               </div>
@@ -704,7 +704,7 @@ export const BuyDLMC = () => {
       >
         <Info size={15} color={GOLD} style={{ flexShrink: 0, marginTop: 2 }} />
         <p style={{ fontSize: '0.78rem', color: '#64748B', lineHeight: 1.6, margin: 0 }}>
-          Purchases mint new DLMC tokens at the current contract price. A&nbsp;
+          Purchases mint new Vertex Capital tokens at the current contract price. A&nbsp;
           <span style={{ color: '#F8FAFC', fontWeight: 600 }}>5% system development fee</span> is deducted before calculation.
           The token price will increase by&nbsp;
           <span style={{ color: MINT, fontWeight: 600 }}>15% to ${futurePrice.toFixed(4)} USDT</span> following your transaction.
@@ -714,4 +714,4 @@ export const BuyDLMC = () => {
   );
 };
 
-export default BuyDLMC;
+export default BuyVertexCapital;

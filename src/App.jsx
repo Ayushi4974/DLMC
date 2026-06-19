@@ -8,8 +8,8 @@ import AdminLayout from './layouts/AdminLayout';
 
 // Individual user views
 import Overview from './pages/user/Overview';
-import BuyDLMC from './pages/user/BuyDLMC';
-import SellDLMC from './pages/user/SellDLMC';
+import BuyVertexCapital from './pages/user/BuyVertexCapital';
+import SellVertexCapital from './pages/user/SellVertexCapital';
 import StakingActive from './pages/user/StakingActive';
 import DividendHistory from './pages/user/DividendHistory';
 import ClaimRewards from './pages/user/ClaimRewards';
@@ -99,7 +99,7 @@ function App() {
     return (
       <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--background)', color: 'var(--gold-light)' }}>
         <div style={{ textAlign: 'center' }}>
-          <h2 className="glow-text" style={{ fontSize: '2.5rem', marginBottom: '10px' }}>DLMC</h2>
+          <h2 className="glow-text" style={{ fontSize: '2.5rem', marginBottom: '10px' }}>Vertex Capital</h2>
           <p style={{ color: 'var(--text-secondary)' }}>Securing Web3 session keys...</p>
         </div>
       </div>
@@ -115,8 +115,8 @@ function App() {
       <Route path="/dashboard" element={<RequireAuth><DashboardLayout /></RequireAuth>}>
         <Route index element={<Navigate to="/dashboard/overview" replace />} />
         <Route path="overview" element={<Overview />} />
-        <Route path="buy" element={<BuyDLMC />} />
-        <Route path="sell" element={<SellDLMC />} />
+        <Route path="buy" element={<BuyVertexCapital />} />
+        <Route path="sell" element={<SellVertexCapital />} />
         <Route path="staking/active" element={<StakingActive />} />
         <Route path="staking/dividends" element={<DividendHistory />} />
         <Route path="staking/claim" element={<ClaimRewards />} />

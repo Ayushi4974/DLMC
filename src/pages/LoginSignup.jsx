@@ -134,7 +134,7 @@ const LoginSignup = ({ onBack, onAuthSuccess }) => {
 
         {/* Logo */}
         <div style={{ marginBottom: '40px' }}>
-          <img src={logoImg} alt="Vertex Capital Logo" style={{ height: '90px', width: 'auto', marginBottom: '8px' }} />
+          <img src={logoImg} alt="Vertex Capital Logo" style={{ height: '120px', width: 'auto', marginBottom: '8px' }} />
           <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', marginTop: '4px', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
             Vertex Capital
           </p>
@@ -195,7 +195,7 @@ const LoginSignup = ({ onBack, onAuthSuccess }) => {
         <div style={{ width: '100%', maxWidth: '440px' }}>
           {/* Mobile logo */}
           <div style={{ textAlign: 'center', marginBottom: '28px' }}>
-            <img src={logoImg} alt="Vertex Capital Logo" style={{ height: '75px', width: 'auto', margin: '0 auto' }} />
+            <img src={logoImg} alt="Vertex Capital Logo" style={{ height: '100px', width: 'auto', margin: '0 auto' }} />
           </div>
 
           {/* Tab switcher */}
@@ -242,7 +242,7 @@ const LoginSignup = ({ onBack, onAuthSuccess }) => {
             </h2>
             <p style={{ fontSize: '0.88rem', color: 'var(--text-secondary)' }}>
               {isLogin
-                ? 'Access your DLMC staking portfolio and earnings dashboard.'
+                ? 'Access your Vertex Capital staking portfolio and earnings dashboard.'
                 : 'Join the decentralized ecosystem and start earning today.'
               }
             </p>

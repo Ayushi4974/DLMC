@@ -111,7 +111,7 @@ export const Profile = () => {
 
   return (
     <div style={{ width: '100%', maxWidth: '100%', display: 'flex', flexDirection: 'column', gap: '28px', fontFamily: FONT }}>
-      {/* Header Banner — Unboxed clean layout matching Buy/Sell DLMC */}
+      {/* Header Banner — Unboxed clean layout matching Buy/Sell Vertex Capital */}
       <motion.div
         initial={{ opacity: 0, y: -12 }}
         animate={{ opacity: 1, y: 0 }}

@@ -36,12 +36,12 @@ export const AdminOverview = () => {
         {[
           { title: "Global Users Count", val: metrics.totalUsers, label: "Registered accounts" },
           { title: "Total USDT Deposited", val: `${Number(metrics.totalUSDT).toFixed(2)} USDT`, label: "Circulating liquidities" },
-          { title: "Circulating DLMC", val: `${Number(metrics.totalCirculatingDlmc).toFixed(2)} DLMC`, label: `Total Minted supply` },
+          { title: "Circulating Vertex Capital", val: `${Number(metrics.totalCirculatingDlmc).toFixed(2)} Vertex Capital`, label: `Total Minted supply` },
           { title: "Total Claims Paid", val: `${Number(metrics.totalClaimed).toFixed(2)} USDT`, label: "Net yields claimed" },
           { title: "Active LPDAO Members", val: metrics.totalUsers > 1 ? 1 : 0, label: "Governance participants" },
           { title: "Open Support Tickets", val: metrics.openTickets, label: "Awaiting administrator response" },
           { title: "Active Proposals", val: metrics.totalProposals, label: "Open voting polls" },
-          { title: "DLMC Token Price", val: `$${cms.tokenPrice.toFixed(4)} USDT`, label: "Base exchange index" }
+          { title: "Vertex Capital Token Price", val: `$${cms.tokenPrice.toFixed(4)} USDT`, label: "Base exchange index" }
         ].map((m, i) => (
           <div key={i} className="glass-card" style={{ borderLeft: '4px solid var(--gold-primary)' }}>
             <span style={{ fontSize: '0.85rem', color: 'var(--text-muted)', textTransform: 'uppercase', fontWeight: '600' }}>{m.title}</span>

@@ -1,5 +1,5 @@
 /**
- * PriceIndexChart — Luxury Obsidian & Gold DLMC Price Area Chart
+ * PriceIndexChart — Luxury Obsidian & Gold Vertex Capital Price Area Chart
  *
  * Design spec:
  *  - Gold stroke #D4A017, strokeWidth 2.5
@@ -88,7 +88,7 @@ const PriceTooltip = ({ active, payload, label }) => {
               ${Number(price).toFixed(4)}
             </div>
             <div style={{ fontSize: '0.72rem', color: '#94A3B8', marginTop: 1 }}>
-              DLMC / USDT
+              Vertex Capital / USDT
             </div>
           </div>
         </div>
@@ -188,7 +188,7 @@ const PriceIndexChart = ({ data = [], change24h = 2.5 }) => {
               color: '#FFFFFF',
               letterSpacing: '-0.01em',
             }}>
-              DLMC Price Index
+              Vertex Capital Price Index
             </h3>
           </div>
           <p style={{ fontSize: '0.75rem', color: '#64748B', marginLeft: 25 }}>

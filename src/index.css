@@ -41,13 +41,13 @@
   /* Layout Constants */
   --sidebar-width: 280px;
   --sidebar-collapsed-width: 80px;
-  --header-height: 90px;
+  --header-height: 120px;
 }
 
 /* Reduce header height on mobile */
 @media (max-width: 480px) {
   :root {
-    --header-height: 75px;
+    --header-height: 100px;
   }
 }
 

@@ -65,7 +65,7 @@ export const AdminCMS = () => {
 
       <form onSubmit={handleUpdateCMS} className="glass-card" style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
         <div className="form-group">
-          <label className="form-label">DLMC Token Exchange Price (USDT)</label>
+          <label className="form-label">Vertex Capital Token Exchange Price (USDT)</label>
           <input 
             type="number" 
             step="0.0001" 
@@ -86,7 +86,7 @@ export const AdminCMS = () => {
         </div>
 
         <div className="form-group">
-          <label className="form-label">DLMC Sell Burn Fee (%)</label>
+          <label className="form-label">Vertex Capital Sell Burn Fee (%)</label>
           <input 
             type="number" 
             className="form-control" 

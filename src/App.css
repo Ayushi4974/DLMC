@@ -1138,7 +1138,7 @@ a[href^="#"]:hover {
 }
 
 /* ═══════════════════════════════════════════
-   DLMC LANDING PAGE STYLES & LAYOUT
+   Vertex Capital LANDING PAGE STYLES & LAYOUT
    (2-Column responsive grid, backdrop orbs)
    ═══════════════════════════════════════════ */
 
@@ -1655,7 +1655,7 @@ a[href^="#"]:hover {
   }
 }
 
-/* ─── Buy/Sell DLMC page responsive ─── */
+/* ─── Buy/Sell Vertex Capital page responsive ─── */
 @media (max-width: 640px) {
   .buy-sell-tabs {
     flex-wrap: wrap;
@@ -2003,7 +2003,7 @@ a[href^="#"]:hover {
 /* Responsive Dashboard Logo Height on Mobile */
 @media (max-width: 768px) {
   .logo-section img {
-    height: 65px !important;
+    height: 85px !important;
   }
 }
 

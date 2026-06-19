@@ -91,7 +91,7 @@ const DashboardLayout = () => {
             {isSidebarOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
           <div className="logo-section" style={{ display: 'flex', alignItems: 'center' }}>
-            <img src={logoImg} alt="Vertex Capital Logo" style={{ height: '80px', width: 'auto' }} />
+            <img src={logoImg} alt="Vertex Capital Logo" style={{ height: '100px', width: 'auto' }} />
           </div>
         </div>
 
@@ -161,8 +161,8 @@ const DashboardLayout = () => {
         <aside className={`dashboard-sidebar ${isSidebarOpen ? 'open' : 'closed'}`}>
           <nav className="sidebar-nav">
             {navItem('/dashboard/overview', 'Overview', LayoutDashboard)}
-            {navItem('/dashboard/buy', 'Buy DLMC', Wallet)}
-            {navItem('/dashboard/sell', 'Sell DLMC', ArrowLeftRight)}
+            {navItem('/dashboard/buy', 'Buy Vertex Capital', Wallet)}
+            {navItem('/dashboard/sell', 'Sell Vertex Capital', ArrowLeftRight)}
 
             {/* Folder: Staking */}
             <div className="folder-container">

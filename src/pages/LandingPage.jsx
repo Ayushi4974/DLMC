@@ -155,7 +155,7 @@ const FloatingCoin = () => {
       >
         <div className="coin-token-inner">
           <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <span className="glow-text coin-token-title">DLMC</span>
+            <span className="glow-text coin-token-title">Vertex Capital</span>
             <span className="coin-token-sub">PROTOCOL</span>
           </div>
         </div>
@@ -331,7 +331,7 @@ const LandingPage = () => {
   const goToRegister = () => navigate(`/login?ref=${refCode}&mode=register`);
 
   const copyAddress = () => {
-    navigator.clipboard.writeText("0xDLMCPRotocolSmartContractAddressBEP20");
+    navigator.clipboard.writeText("0xVertex CapitalPRotocolSmartContractAddressBEP20");
     setCopiedText(true);
     setTimeout(() => setCopiedText(false), 2000);
   };
@@ -371,7 +371,7 @@ const LandingPage = () => {
   // FAQ data mapping
   const faqs = [
     {
-      question: "How do I get started with DLMC?",
+      question: "How do I get started with Vertex Capital?",
       answer: "Starting is easy! Connect your Web3 decentralized browser wallet (such as MetaMask or Trust Wallet) configured on the Binance Smart Chain. Click 'Launch Portal', choose your stake amount (starting from $1 USDT), and approve the transaction. Staking dividends begin within 24 hours."
     },
     {
@@ -380,7 +380,7 @@ const LandingPage = () => {
     },
     {
       question: "How does the Mint-on-Buy and Burn-on-Sell mechanism work?",
-      answer: "Unlike traditional pre-mined tokens, DLMC has no fixed supply. Buying DLMC tokens mints new supply directly, with 15% contributing directly to the mathematical appreciation index and 85% minting the tokens. Selling tokens back to the contract burns the tokens (deleting them from supply) and incurs a 10% burn, preserving scarcity."
+      answer: "Unlike traditional pre-mined tokens, Vertex Capital has no fixed supply. Buying Vertex Capital tokens mints new supply directly, with 15% contributing directly to the mathematical appreciation index and 85% minting the tokens. Selling tokens back to the contract burns the tokens (deleting them from supply) and incurs a 10% burn, preserving scarcity."
     },
     {
       question: "What are the rules for unlocking affiliate and referral income?",
@@ -408,7 +408,7 @@ const LandingPage = () => {
         style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.05)', backdropFilter: 'blur(15px)', position: 'sticky', top: 0, zIndex: 100, background: 'rgba(5, 7, 10, 0.8)' }}
       >
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          <img src={logoImg} alt="Vertex Capital Logo" style={{ height: '100px', width: 'auto' }} />
+          <img src={logoImg} alt="Vertex Capital Logo" style={{ height: '130px', width: 'auto' }} />
         </div>
 
         {/* Desktop Navigation Link Container */}
@@ -515,7 +515,7 @@ const LandingPage = () => {
               <div style={{ height: '1px', background: 'rgba(255,255,255,0.08)', margin: '4px 0' }} />
 
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <span style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>DLMC Price:</span>
+                <span style={{ fontSize: '0.9rem', color: 'var(--text-secondary)' }}>Vertex Capital Price:</span>
                 <strong className="text-gold glow-text" style={{ fontSize: '1.1rem' }}>${tokenPrice.toFixed(4)} USDT</strong>
               </div>
 
@@ -659,7 +659,7 @@ const LandingPage = () => {
               transition={{ delay: 0.2, duration: 0.7, ease: LUXURY_EASE }}
               style={{ fontSize: '1.2rem', color: 'var(--text-secondary)', marginBottom: '45px', lineHeight: '1.8', maxWidth: '780px' }}
             >
-              Earn up to 1.0% daily growth, mint appreciating DLMC assets on Binance Smart Chain (BEP-20), unlock deep 15-level network incentives, and qualify for daily rank salaries.
+              Earn up to 1.0% daily growth, mint appreciating Vertex Capital assets on Binance Smart Chain (BEP-20), unlock deep 15-level network incentives, and qualify for daily rank salaries.
             </motion.p>
 
             <motion.div 
@@ -751,7 +751,7 @@ const LandingPage = () => {
           >
             <Activity size={28} className="text-gold" style={{ marginBottom: '12px', marginInline: 'auto' }} />
             <h3 style={{ fontSize: '2rem', fontWeight: '800' }}>
-              <AnimatedCounter value="250000" suffix=" DLMC" />
+              <AnimatedCounter value="250000" suffix=" Vertex Capital" />
             </h3>
             <p style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', textTransform: 'uppercase', marginTop: '6px', letterSpacing: '0.5px' }}>Tokens Burned</p>
           </PremiumGlowCard>
@@ -783,10 +783,10 @@ const LandingPage = () => {
             <div className="badge badge-warning" style={{ marginBottom: '16px' }}>Project Background</div>
             <h2 className="lp-section-title">About Decentralised Legacy Management Corporation</h2>
             <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: '1.7', marginBottom: '20px' }}>
-               DLMC was created to establish a sustainable, community-governed financial staking platform on the blockchain, eliminating middleman control and maximizing yield security.
+               Vertex Capital was created to establish a sustainable, community-governed financial staking platform on the blockchain, eliminating middleman control and maximizing yield security.
             </p>
             <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: '1.7', marginBottom: '28px' }}>
-               Through automated smart contract parameters and mathematically calculated token minting, DLMC offers a stable model where token values appreciation is directly bound to lock-up growth metrics.
+               Through automated smart contract parameters and mathematically calculated token minting, Vertex Capital offers a stable model where token values appreciation is directly bound to lock-up growth metrics.
             </p>
             
             <div className="grid-cols-2" style={{ gap: '20px' }}>
@@ -850,7 +850,7 @@ const LandingPage = () => {
           <div style={{ textAlign: 'center', marginBottom: '60px' }}>
             <motion.h2 variants={fadeInUp} className="lp-section-title">Core Ecosystem Features</motion.h2>
             <motion.p variants={fadeInUp} style={{ maxWidth: '700px', margin: '0 auto', fontSize: '1.05rem', color: 'var(--text-secondary)' }}>
-              DLMC leverages robust blockchain algorithms to provide transparency, security, and consistent incentives.
+              Vertex Capital leverages robust blockchain algorithms to provide transparency, security, and consistent incentives.
             </motion.p>
           </div>
 
@@ -899,7 +899,7 @@ const LandingPage = () => {
           <div style={{ textAlign: 'center', marginBottom: '60px' }}>
             <motion.h2 variants={fadeInUp} className="lp-section-title">How It Works</motion.h2>
             <motion.p variants={fadeInUp} style={{ maxWidth: '700px', margin: '0 auto', fontSize: '1.05rem', color: 'var(--text-secondary)' }}>
-              Follow these 4 simple steps to start earning dividends in the DLMC ecosystem.
+              Follow these 4 simple steps to start earning dividends in the Vertex Capital ecosystem.
             </motion.p>
           </div>
 
@@ -971,7 +971,7 @@ const LandingPage = () => {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
               {[
                 { label: "Token Name", val: "Decentralised Legacy Management Corp" },
-                { label: "Symbol", val: "DLMC" },
+                { label: "Symbol", val: "Vertex Capital" },
                 { label: "Network", val: "BSC (BEP-20)" },
                 { label: "Initial Price", val: "$0.10 USDT" },
                 { label: "Supply Model", val: "Mint on Buy / Burn on Sell" },
@@ -1067,22 +1067,22 @@ const LandingPage = () => {
                           <span key={`fee-${usdtInput}`} className="value-bounce">${(usdtInput * 0.05).toFixed(2)} USDT</span>
                         </div>
                         <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '10px', marginTop: '2px' }} className="flex-between">
-                          <span style={{ fontWeight: '700', color: 'var(--gold-light)' }}>DLMC Mint Output:</span>
+                          <span style={{ fontWeight: '700', color: 'var(--gold-light)' }}>Vertex Capital Mint Output:</span>
                           <span key={`mint-out-${usdtInput}-${tokenPrice}`} className="text-gold glow-text value-bounce" style={{ fontSize: '1.25rem', fontWeight: '800' }}>
-                            {((usdtInput * 0.85) / tokenPrice).toFixed(3)} DLMC
+                            {((usdtInput * 0.85) / tokenPrice).toFixed(3)} Vertex Capital
                           </span>
                         </div>
                       </div>
                     </div>
                   ) : (
                     <div>
-                      <h4 style={{ fontSize: '1.25rem', marginBottom: '10px', fontWeight: 800 }}>DLMC Token Sale & Burn</h4>
+                      <h4 style={{ fontSize: '1.25rem', marginBottom: '10px', fontWeight: 800 }}>Vertex Capital Token Sale & Burn</h4>
                       <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '18px' }}>
                         Sells incur a contract-enforced 10% token burn, removing tokens from supply to defend remaining value.
                       </p>
 
                       <div className="form-group" style={{ marginBottom: '16px' }}>
-                        <label className="form-label">Sell Amount (DLMC)</label>
+                        <label className="form-label">Sell Amount (Vertex Capital)</label>
                         <input 
                           type="number" 
                           className="form-control" 
@@ -1098,7 +1098,7 @@ const LandingPage = () => {
                         </div>
                         <div className="flex-between" style={{ fontSize: '0.88rem' }}>
                           <span style={{ color: 'var(--text-secondary)' }}>Permanent Burn (10%):</span>
-                          <span key={`burn-${dlmcSellInput}`} className="value-bounce" style={{ color: 'var(--error)' }}>-{(dlmcSellInput * 0.1).toFixed(2)} DLMC</span>
+                          <span key={`burn-${dlmcSellInput}`} className="value-bounce" style={{ color: 'var(--error)' }}>-{(dlmcSellInput * 0.1).toFixed(2)} Vertex Capital</span>
                         </div>
                         <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '10px', marginTop: '2px' }} className="flex-between">
                           <span style={{ fontWeight: '700', color: 'var(--gold-light)' }}>Net USDT Received:</span>
@@ -1483,7 +1483,7 @@ const LandingPage = () => {
             <span className="badge badge-success" style={{ marginBottom: '14px' }}>Security Verified</span>
             <h3 style={{ fontSize: '2rem', fontWeight: '800', marginBottom: '16px' }}>On-Chain Contract Verification</h3>
             <p style={{ color: 'var(--text-secondary)', fontSize: '0.96rem', lineHeight: '1.6', marginBottom: '24px' }}>
-              The DLMC smart contracts are renounced on-chain, meaning developers cannot alter the rules, fee levels, or yield percentages. All funds are backed contractually.
+              The Vertex Capital smart contracts are renounced on-chain, meaning developers cannot alter the rules, fee levels, or yield percentages. All funds are backed contractually.
             </p>
 
             <div className="form-group" style={{ marginBottom: '16px' }}>
@@ -1493,7 +1493,7 @@ const LandingPage = () => {
                   type="text" 
                   className="form-control" 
                   style={{ fontFamily: 'var(--font-mono)', fontSize: '0.85rem', background: 'rgba(0,0,0,0.3)' }}
-                  value="0xDLMCPRotocolSmartContractAddressBEP20" 
+                  value="0xVertex CapitalPRotocolSmartContractAddressBEP20" 
                   readOnly
                 />
                 <motion.button 
@@ -1653,7 +1653,7 @@ const LandingPage = () => {
           style={{ padding: '60px 40px', textAlign: 'center', background: 'linear-gradient(135deg, rgba(5,7,10,0.8) 0%, rgba(224, 160, 30, 0.08) 100%)', border: '1px solid var(--gold-primary)', position: 'relative' }}
         >
           <h2 style={{ fontSize: '3rem', fontWeight: 800, marginBottom: '20px', background: 'linear-gradient(to right, #ffffff, #f8d954, #e0a01e)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-            Join the DLMC Ecosystem Today
+            Join the Vertex Capital Ecosystem Today
           </h2>
           <p style={{ maxWidth: '650px', margin: '0 auto 35px', fontSize: '1.1rem', color: 'var(--text-secondary)', lineHeight: '1.6' }}>
             Connect your Web3 browser wallet, stake USDT values securely on-chain, and unlock multilevel growth rewards.
@@ -1673,7 +1673,7 @@ const LandingPage = () => {
       <footer style={{ borderTop: '1px solid rgba(255, 255, 255, 0.05)', background: '#07090D', padding: '60px 40px 40px' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '40px', marginBottom: '40px' }}>
           <div>
-            <img src={logoImg} alt="Vertex Capital Logo" style={{ height: '80px', width: 'auto', marginBottom: '10px' }} />
+            <img src={logoImg} alt="Vertex Capital Logo" style={{ height: '110px', width: 'auto', marginBottom: '10px' }} />
             <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginTop: '12px', lineHeight: '1.5' }}>
               Vertex Capital is a decentralized blockchain platform built on BEP-20 smart contracts.
             </p>
@@ -1706,7 +1706,7 @@ const LandingPage = () => {
         </div>
         
         <div style={{ maxWidth: '1200px', margin: '0 auto', borderTop: '1px solid rgba(255, 255, 255, 0.04)', paddingTop: '30px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '20px' }}>
-          <p style={{ fontSize: '0.82rem', color: 'var(--text-muted)' }}>&copy; {new Date().getFullYear()} DLMC FinTech Protocol. All rights reserved.</p>
+          <p style={{ fontSize: '0.82rem', color: 'var(--text-muted)' }}>&copy; {new Date().getFullYear()} Vertex Capital FinTech Protocol. All rights reserved.</p>
           <p style={{ fontSize: '0.72rem', color: 'var(--text-disabled)', maxWidth: '700px', lineHeight: '1.4' }}>
             Disclaimer: Staking cryptocurrency assets holds risk. Yield commissions, price appreciation indices, and MLM downlines are programmatically calculated on-chain, but value depends strictly on liquidity locks. Invest wisely.
           </p>

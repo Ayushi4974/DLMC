@@ -120,7 +120,7 @@ export const ReferralLink = () => {
 
             <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginBottom: '24px' }}>
               <motion.a
-                href={`https://t.me/share/url?url=${encodeURIComponent(refData.referralUrl)}&text=Join%20my%20DLMC%20Staking%20Downline!`}
+                href={`https://t.me/share/url?url=${encodeURIComponent(refData.referralUrl)}&text=Join%20my%20Vertex Capital%20Staking%20Downline!`}
                 target="_blank"
                 rel="noreferrer"
                 className="btn btn-secondary"
@@ -131,7 +131,7 @@ export const ReferralLink = () => {
                 <Share2 size={16} /> Telegram Share
               </motion.a>
               <motion.a
-                href={`https://api.whatsapp.com/send?text=Join%20my%20DLMC%20Staking%20Downline!%20${encodeURIComponent(refData.referralUrl)}`}
+                href={`https://api.whatsapp.com/send?text=Join%20my%20Vertex Capital%20Staking%20Downline!%20${encodeURIComponent(refData.referralUrl)}`}
                 target="_blank"
                 rel="noreferrer"
                 className="btn btn-secondary"

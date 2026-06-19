@@ -1,5 +1,5 @@
 /**
- * SellDLMC — Ultra-Premium Luxury Obsidian & Gold Sell Interface
+ * SellVertexCapital — Ultra-Premium Luxury Obsidian & Gold Sell Interface
  *
  * Design system highlights:
  *  - 3D Elevated card shadow layout
@@ -84,7 +84,7 @@ const QuotaIndicator = ({ used, max }) => {
           Daily Quota Limit
         </span>
         <span style={{ fontSize: '0.8rem', color, fontWeight: 700 }}>
-          {used.toLocaleString()} / {max.toLocaleString()} DLMC
+          {used.toLocaleString()} / {max.toLocaleString()} Vertex Capital
         </span>
       </div>
       <div style={{ height: 8, background: 'rgba(255,255,255,0.06)', borderRadius: 99, overflow: 'hidden', position: 'relative' }}>
@@ -129,7 +129,7 @@ const PctBtn = ({ label, active, onClick }) => (
   </motion.button>
 );
 
-export const SellDLMC = () => {
+export const SellVertexCapital = () => {
   const { authFetch } = useWallet();
   const [dlmcInput, setDlmcInput] = useState('');
   const [data,      setData]      = useState(null);
@@ -160,7 +160,7 @@ export const SellDLMC = () => {
       const resData = await res.json();
       if (res.ok) {
         setTxState('success');
-        setTxMsg(`${Number(dlmcInput).toFixed(4)} DLMC burned → ${resData.netUsdt?.toFixed(4) ?? netUsdt.toFixed(4)} USDT credited!`);
+        setTxMsg(`${Number(dlmcInput).toFixed(4)} Vertex Capital burned → ${resData.netUsdt?.toFixed(4) ?? netUsdt.toFixed(4)} USDT credited!`);
         setDlmcInput(''); setPctActive(null);
         fireConfetti();
         setTimeout(() => { setTxState(null); loadData(); }, 3500);
@@ -237,7 +237,7 @@ export const SellDLMC = () => {
             background: `linear-gradient(135deg, #FFFFFF 30%, ${GOLD_LIGHT} 100%)`,
             WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
           }}>
-            Sell DLMC Token
+            Sell Vertex Capital Token
           </h2>
         </div>
         
@@ -251,7 +251,7 @@ export const SellDLMC = () => {
           boxShadow: '0 8px 30px rgba(0,0,0,0.2)'
         }}>
           <p style={{ color: '#F8FAFC', fontSize: '0.88rem', lineHeight: 1.6, margin: 0 }}>
-            Redeem DLMC tokens for USDT. Sold supply is <strong style={{ color: '#FCA5A5' }}>permanently burned</strong> from circulation. The token price will <strong style={{ color: '#FDE047' }}>drop 10%</strong> after each sell transaction.
+            Redeem Vertex Capital tokens for USDT. Sold supply is <strong style={{ color: '#FCA5A5' }}>permanently burned</strong> from circulation. The token price will <strong style={{ color: '#FDE047' }}>drop 10%</strong> after each sell transaction.
           </p>
         </div>
       </motion.div>
@@ -287,11 +287,11 @@ export const SellDLMC = () => {
           </div>
         </AntiGravityCard>
 
-        {/* DLMC Balance Card */}
+        {/* Vertex Capital Balance Card */}
         <AntiGravityCard accent="#FFFFFF" depth={8} tilt={true} glow={true}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', padding: '22px 20px' }}>
             <div style={{ fontSize: '0.75rem', color: '#A1A1AA', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 700 }}>
-              DLMC Balance
+              Vertex Capital Balance
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
               <div style={{
@@ -302,7 +302,7 @@ export const SellDLMC = () => {
               }}>
                 <Layers size={14} color="#FFF" style={{ opacity: 0.8 }} />
               </div>
-              <AnimNum value={dlmcBal} suffix=" DLMC" decimals={4} color="#FFFFFF" size="1.6rem" />
+              <AnimNum value={dlmcBal} suffix=" Vertex Capital" decimals={4} color="#FFFFFF" size="1.6rem" />
             </div>
           </div>
         </AntiGravityCard>
@@ -331,7 +331,7 @@ export const SellDLMC = () => {
                   Initiate Sell Order
                 </h3>
                 <p style={{ fontSize: '0.78rem', color: '#64748B', marginTop: 4, marginBottom: 0 }}>
-                  Enter the amount of DLMC you wish to burn and redeem for USDT.
+                  Enter the amount of Vertex Capital you wish to burn and redeem for USDT.
                 </p>
               </div>
 
@@ -345,7 +345,7 @@ export const SellDLMC = () => {
                   textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 700, marginBottom: 10,
                   paddingLeft: '4px'
                 }}>
-                  Sell Amount (DLMC)
+                  Sell Amount (Vertex Capital)
                 </label>
 
                 <div style={{
@@ -362,7 +362,7 @@ export const SellDLMC = () => {
                     padding: '0 18px', fontSize: '0.9rem', color: '#9CA3AF',
                     fontWeight: 700, borderRight: '1px solid rgba(255,255,255,0.08)', userSelect: 'none',
                   }}>
-                    DLMC
+                    Vertex Capital
                   </span>
                   <input
                     type="number" min="0" placeholder="0.0000"
@@ -401,8 +401,8 @@ export const SellDLMC = () => {
                     >
                       <AlertCircle size={14} />
                       {overBalance
-                        ? `Insufficient balance. Max: ${dlmcBal.toFixed(4)} DLMC`
-                        : `Exceeds daily limit of ${maxSellLimit.toLocaleString()} DLMC`
+                        ? `Insufficient balance. Max: ${dlmcBal.toFixed(4)} Vertex Capital`
+                        : `Exceeds daily limit of ${maxSellLimit.toLocaleString()} Vertex Capital`
                       }
                     </motion.div>
                   )}
@@ -439,7 +439,7 @@ export const SellDLMC = () => {
                   Approve
                 </motion.button>
 
-                {/* Sell DLMC — solid red/gold gradient */}
+                {/* Sell Vertex Capital — solid red/gold gradient */}
                 <motion.button
                   onClick={handleSell}
                   disabled={!canSell}
@@ -484,7 +484,7 @@ export const SellDLMC = () => {
                   ) : (
                     <>
                       <Flame size={15} />
-                      Sell DLMC
+                      Sell Vertex Capital
                       <ChevronRight size={14} />
                     </>
                   )}
@@ -665,7 +665,7 @@ export const SellDLMC = () => {
       >
         <Info size={15} color={GOLD} style={{ flexShrink: 0, marginTop: 2 }} />
         <p style={{ fontSize: '0.78rem', color: '#64748B', lineHeight: 1.6, margin: 0 }}>
-          Selling DLMC permanently removes tokens from the circulating supply via the&nbsp;
+          Selling Vertex Capital permanently removes tokens from the circulating supply via the&nbsp;
           <span style={{ color: '#F8FAFC', fontWeight: 600 }}>automatic burn mechanism</span>.
           A <span style={{ color: BURN_RED, fontWeight: 600 }}>{cms.sellFeePercent || 10}% liquidity/burn fee</span> is deducted before USDT is released.
           The token price will decrease by&nbsp;
@@ -676,4 +676,4 @@ export const SellDLMC = () => {
   );
 };
 
-export default SellDLMC;
+export default SellVertexCapital;

@@ -234,7 +234,7 @@ export const Overview = () => {
   /* ── Card definitions ── */
   const cards = [
     { title: 'Wallet Balance',      rawValue: summary.usdtBalance,       unit: 'USDT', label: 'Available to stake',                   icon: Wallet,           accent: '#D4A017', trend: 12.5 },
-    { title: 'DLMC Balance',        rawValue: summary.dlmcBalance,        unit: 'DLMC', label: `Token Price: $${(cms?.tokenPrice||1.25).toFixed(2)}`, icon: CircleDollarSign, accent: '#3B82F6', trend: 2.5  },
+    { title: 'Vertex Capital Balance',        rawValue: summary.dlmcBalance,        unit: 'Vertex Capital', label: `Token Price: $${(cms?.tokenPrice||1.25).toFixed(2)}`, icon: CircleDollarSign, accent: '#3B82F6', trend: 2.5  },
     { title: 'Total Staked',        rawValue: summary.totalStaked,        unit: 'USDT', label: `${summary.activeStakesCount} Active stakes`, icon: Layers,      accent: '#22C55E', trend: 0    },
     { title: 'Available Dividends', rawValue: summary.availableDividends, unit: 'USDT', label: 'Claim anytime',                        icon: Sparkles,         accent: '#A855F7', trend: 8.3  },
     { title: 'Total Claimed',       rawValue: summary.totalClaimed,       unit: 'USDT', label: 'Deducted fees applied',                icon: Gift,             accent: '#14B8A6', trend: null },
@@ -252,7 +252,7 @@ export const Overview = () => {
   ];
 
   const quickActions = [
-    { label: 'Buy DLMC',       icon: ShoppingCart, path: '/dashboard/buy',            color: '#D4A017' },
+    { label: 'Buy Vertex Capital',       icon: ShoppingCart, path: '/dashboard/buy',            color: '#D4A017' },
     { label: 'Stake Now',      icon: Layers,       path: '/dashboard/staking/active',  color: '#22C55E' },
     { label: 'Claim Rewards',  icon: Gift,         path: '/dashboard/staking/claim',   color: '#A855F7' },
     { label: 'Invite Friends', icon: Users,        path: '/dashboard/referrals/link',  color: '#3B82F6' },
@@ -418,7 +418,7 @@ export const Overview = () => {
             <DailyEarningsChart data={charts.dailyEarnings} />
           </motion.div>
 
-          {/* ── DLMC Price Index — Premium Standalone Chart ── */}
+          {/* ── Vertex Capital Price Index — Premium Standalone Chart ── */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
