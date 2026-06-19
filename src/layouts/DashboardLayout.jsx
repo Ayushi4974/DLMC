@@ -91,7 +91,7 @@ const DashboardLayout = () => {
             {isSidebarOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
           <div className="logo-section" style={{ display: 'flex', alignItems: 'center' }}>
-            <img src={logoImg} alt="Vertex Capital Logo" style={{ height: '65px', width: 'auto' }} />
+            <img src={logoImg} alt="Vertex Capital Logo" style={{ height: '80px', width: 'auto' }} />
           </div>
         </div>
 

@@ -2003,7 +2003,7 @@ a[href^="#"]:hover {
 /* Responsive Dashboard Logo Height on Mobile */
 @media (max-width: 768px) {
   .logo-section img {
-    height: 48px !important;
+    height: 65px !important;
   }
 }
 
