@@ -302,9 +302,6 @@ const LandingPage = () => {
   const [calculatorMode, setCalculatorMode] = useState('buy'); // 'buy' | 'sell'
   const [usdtInput, setUsdtInput] = useState(100);
   const [dlmcSellInput, setDlmcSellInput] = useState(100);
-  
-  const [stakeInput, setStakeInput] = useState(500);
-  const [roiSlider, setRoiSlider] = useState(0.5); // 0.5% to 1% daily
 
   // Multi-level Team Income interactive state
   const [activeLevelTab, setActiveLevelTab] = useState(1);
@@ -1132,105 +1129,123 @@ const LandingPage = () => {
         <div style={{ textAlign: 'center', marginBottom: '60px' }}>
           <motion.h2 variants={fadeInUp} className="lp-section-title">Staking & Daily Dividends</motion.h2>
           <motion.p variants={fadeInUp} style={{ maxWidth: '700px', margin: '0 auto', fontSize: '1.05rem', color: 'var(--text-secondary)' }}>
-            Stake USDT value to accrue daily returns, with dynamic caps protecting smart contract liquidity pools.
+            Lock your USDT assets in secure decentralized smart contracts to generate daily yields and build sustainable wealth.
           </motion.p>
         </div>
 
-        <div className="grid-cols-2" style={{ alignItems: 'center', gap: '40px' }}>
-          <motion.div variants={fadeInLeft}>
-            <h3 style={{ fontSize: '1.8rem', marginBottom: '20px', fontWeight: '800' }}>Yield Rules & Accumulation Cap</h3>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '1.02rem', lineHeight: '1.7', marginBottom: '20px' }}>
-              Staking rewards accumulate on a daily basis (typically between 0.5% and 1.0% growth). Growth compounds until it reaches a maximum cap of <strong>250% of your staked value</strong>.
-            </p>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '1.02rem', lineHeight: '1.7', marginBottom: '24px' }}>
-              If you participate in direct sponsorship and network building, the cumulative reward cap is pushed up to <strong>500% overall</strong>. Once hit, growth pauses until a restake transaction is executed.
-            </p>
-
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px' }}>
-              <div style={{ background: 'rgba(255,255,255,0.02)', padding: '16px', borderRadius: '10px' }}>
-                <strong style={{ color: 'var(--gold-light)', display: 'block', fontSize: '1.1rem', marginBottom: '4px' }}>24h Activation</strong>
-                <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Dividends start generating within 24 hours of on-chain confirmation.</span>
-              </div>
-              <div style={{ background: 'rgba(255,255,255,0.02)', padding: '16px', borderRadius: '10px' }}>
-                <strong style={{ color: 'var(--gold-light)', display: 'block', fontSize: '1.1rem', marginBottom: '4px' }}>$100 MLM Gate</strong>
-                <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Deposits under $100 bypass network commissions (dividends only).</span>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Calculator Card */}
+        {/* 4 Highlight Cards */}
+        <div className="grid-cols-2" style={{ gap: '24px', marginBottom: '48px', display: 'grid' }}>
           <PremiumGlowCard 
-            variants={fadeInRight}
-            className="glass-card" 
-            style={{ border: '1px solid rgba(224, 160, 30, 0.2)' }}
+            variants={fadeInUp}
+            className="glass-card"
+            style={{ padding: '24px', border: '1px solid rgba(224, 160, 30, 0.15)', minHeight: '140px' }}
           >
-            <h3 style={{ fontSize: '1.3rem', marginBottom: '18px', borderBottom: '1px solid var(--card-border)', paddingBottom: '8px', color: 'var(--gold-light)', fontWeight: 800 }}>Staking Return Calculator</h3>
-
-            <div className="form-group" style={{ marginBottom: '18px' }}>
-              <label className="form-label">Stake Amount (USDT)</label>
-              <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
-                <span style={{ position: 'absolute', left: '16px', color: 'var(--gold-light)', fontWeight: 600 }}>$</span>
-                <input 
-                  type="number" 
-                  className="form-control" 
-                  style={{ paddingLeft: '32px' }}
-                  value={stakeInput}
-                  onChange={(e) => setStakeInput(Math.max(1, Number(e.target.value)))}
-                />
+            <div style={{ display: 'flex', gap: '16px' }}>
+              <div style={{
+                width: '48px', height: '48px', borderRadius: '12px',
+                background: 'rgba(224, 160, 30, 0.08)', border: '1px solid rgba(224, 160, 30, 0.2)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--gold-light)', flexShrink: 0
+              }}>
+                <TrendingUp size={22} />
+              </div>
+              <div>
+                <h4 style={{ fontSize: '1.15rem', fontWeight: '800', marginBottom: '8px', color: '#fff' }}>Daily Rewards</h4>
+                <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.5' }}>
+                  Earn consistent daily staking dividends ranging from 0.5% to 1.0% dynamically calculated on your staked USDT value.
+                </p>
               </div>
             </div>
-
-            <div className="form-group" style={{ marginBottom: '22px' }}>
-              <div className="flex-between">
-                <label className="form-label">Accrual Rate (%)</label>
-                <span key={`roi-val-${roiSlider}`} className="value-bounce text-gold" style={{ color: 'var(--gold-light)', fontWeight: '700' }}>{roiSlider}% / day</span>
-              </div>
-              <input 
-                type="range" 
-                min="0.5" 
-                max="1.0" 
-                step="0.05"
-                style={{ width: '100%', accentColor: 'var(--gold-primary)', cursor: 'pointer' }}
-                value={roiSlider}
-                onChange={(e) => setRoiSlider(Number(e.target.value))}
-              />
-            </div>
-
-            <div style={{ background: 'rgba(0,0,0,0.3)', padding: '18px', borderRadius: '10px', display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '16px' }}>
-              <div className="flex-between" style={{ fontSize: '0.88rem' }}>
-                <span style={{ color: 'var(--text-secondary)' }}>Daily Return:</span>
-                <span key={`daily-${stakeInput}-${roiSlider}`} className="value-bounce text-success" style={{ color: 'var(--success)', fontWeight: '700' }}>+${(stakeInput * (roiSlider / 100)).toFixed(2)} USDT</span>
-              </div>
-              <div className="flex-between" style={{ fontSize: '0.88rem' }}>
-                <span style={{ color: 'var(--text-secondary)' }}>Monthly Return (Est):</span>
-                <span key={`monthly-${stakeInput}-${roiSlider}`} className="value-bounce text-success" style={{ color: 'var(--success)', fontWeight: '700' }}>+${(stakeInput * (roiSlider / 100) * 30).toFixed(2)} USDT</span>
-              </div>
-              <div className="flex-between" style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '10px' }}>
-                <span style={{ color: 'var(--text-secondary)' }}>Dividend Cap (250%):</span>
-                <span key={`cap250-${stakeInput}`} className="value-bounce text-gold" style={{ color: 'var(--gold-light)', fontWeight: '700' }}>${(stakeInput * 2.5).toFixed(2)} USDT</span>
-              </div>
-              <div className="flex-between">
-                <span style={{ color: 'var(--text-secondary)' }}>Network Cap (500%):</span>
-                <span key={`cap500-${stakeInput}`} className="value-bounce text-gold" style={{ color: 'var(--gold-light)', fontWeight: '700' }}>${(stakeInput * 5).toFixed(2)} USDT</span>
-              </div>
-            </div>
-
-            {stakeInput < 100 ? (
-              <div style={{ background: 'rgba(239, 68, 68, 0.08)', border: '1px solid rgba(239, 68, 68, 0.25)', padding: '12px', borderRadius: '8px', display: 'flex', gap: '8px' }}>
-                <AlertTriangle size={16} color="var(--error)" style={{ flexShrink: 0, marginTop: '2px' }} />
-                <span style={{ fontSize: '0.78rem', color: 'rgba(255, 100, 100, 0.9)', lineHeight: 1.4 }}>
-                  Deposits under $100 bypass multilevel commissions. Stake $100+ to activate network rewards.
-                </span>
-              </div>
-            ) : (
-              <div style={{ background: 'rgba(34, 197, 94, 0.08)', border: '1px solid rgba(34, 197, 94, 0.25)', padding: '12px', borderRadius: '8px', display: 'flex', gap: '8px' }}>
-                <Shield size={16} color="var(--success)" style={{ flexShrink: 0, marginTop: '2px' }} />
-                <span style={{ fontSize: '0.78rem', color: 'rgba(100, 255, 100, 0.9)', lineHeight: 1.4 }}>
-                  You are qualified to earn network MLM downlines commissions and daily salaries!
-                </span>
-              </div>
-            )}
           </PremiumGlowCard>
+
+          <PremiumGlowCard 
+            variants={fadeInUp}
+            className="glass-card"
+            style={{ padding: '24px', border: '1px solid rgba(224, 160, 30, 0.15)', minHeight: '140px' }}
+          >
+            <div style={{ display: 'flex', gap: '16px' }}>
+              <div style={{
+                width: '48px', height: '48px', borderRadius: '12px',
+                background: 'rgba(224, 160, 30, 0.08)', border: '1px solid rgba(224, 160, 30, 0.2)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--gold-light)', flexShrink: 0
+              }}>
+                <Sparkles size={22} />
+              </div>
+              <div>
+                <h4 style={{ fontSize: '1.15rem', fontWeight: '800', marginBottom: '8px', color: '#fff' }}>Yield Compounding</h4>
+                <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.5' }}>
+                  Your generated yields compile seamlessly to multiply your overall staking velocity and accelerate reward compounding.
+                </p>
+              </div>
+            </div>
+          </PremiumGlowCard>
+
+          <PremiumGlowCard 
+            variants={fadeInUp}
+            className="glass-card"
+            style={{ padding: '24px', border: '1px solid rgba(224, 160, 30, 0.15)', minHeight: '140px' }}
+          >
+            <div style={{ display: 'flex', gap: '16px' }}>
+              <div style={{
+                width: '48px', height: '48px', borderRadius: '12px',
+                background: 'rgba(224, 160, 30, 0.08)', border: '1px solid rgba(224, 160, 30, 0.2)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--gold-light)', flexShrink: 0
+              }}>
+                <Layers size={22} />
+              </div>
+              <div>
+                <h4 style={{ fontSize: '1.15rem', fontWeight: '800', marginBottom: '8px', color: '#fff' }}>Max Cap Protection</h4>
+                <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.5' }}>
+                  Accumulate returns up to a maximum cap of 250% on standard stakes, and up to 500% by participating in team downline growth.
+                </p>
+              </div>
+            </div>
+          </PremiumGlowCard>
+
+          <PremiumGlowCard 
+            variants={fadeInUp}
+            className="glass-card"
+            style={{ padding: '24px', border: '1px solid rgba(224, 160, 30, 0.15)', minHeight: '140px' }}
+          >
+            <div style={{ display: 'flex', gap: '16px' }}>
+              <div style={{
+                width: '48px', height: '48px', borderRadius: '12px',
+                background: 'rgba(224, 160, 30, 0.08)', border: '1px solid rgba(224, 160, 30, 0.2)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--gold-light)', flexShrink: 0
+              }}>
+                <Zap size={22} />
+              </div>
+              <div>
+                <h4 style={{ fontSize: '1.15rem', fontWeight: '800', marginBottom: '8px', color: '#fff' }}>24h Activation Gate</h4>
+                <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', lineHeight: '1.5' }}>
+                  Dividends are automatically activated and start generating on the blockchain within 24 hours of on-chain confirmation.
+                </p>
+              </div>
+            </div>
+          </PremiumGlowCard>
+        </div>
+
+        {/* Start Staking CTA buttons */}
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '16px', flexWrap: 'wrap' }}>
+          <motion.button 
+            whileHover={{ scale: 1.05 }} 
+            whileTap={{ scale: 0.95 }} 
+            className="btn btn-secondary" 
+            style={{ padding: '14px 32px', fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '8px' }}
+            onClick={goToLogin}
+          >
+            <LogIn size={18} /> Start Staking Now
+          </motion.button>
+          
+          <a href="#faq">
+            <motion.button 
+              whileHover={{ scale: 1.05 }} 
+              whileTap={{ scale: 0.95 }} 
+              className="btn btn-outline" 
+              style={{ padding: '14px 32px', fontSize: '1rem', border: '1px solid rgba(255,255,255,0.15)', color: '#fff', background: 'transparent' }}
+            >
+              Learn More
+            </motion.button>
+          </a>
         </div>
       </motion.section>
 
