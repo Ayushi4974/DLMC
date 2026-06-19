@@ -303,8 +303,7 @@ const LandingPage = () => {
   const [usdtInput, setUsdtInput] = useState(100);
   const [dlmcSellInput, setDlmcSellInput] = useState(100);
 
-  // Multi-level Team Income interactive state
-  const [activeLevelTab, setActiveLevelTab] = useState(1);
+
 
   // Ranks & Salaries interactive state
   const [activeRankTab, setActiveRankTab] = useState('D1');
@@ -332,16 +331,7 @@ const LandingPage = () => {
     setTimeout(() => setCopiedText(false), 2000);
   };
 
-  // 15 Level data mapping
-  const levelPayoutPercents = [10, 5, 3, 2, 1, 1, 1, 1, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5];
-  const getLevelReqs = (levelNum) => {
-    const selfStake = Math.min(3000, levelNum * 100);
-    return {
-      selfStake,
-      directs: levelNum,
-      percent: levelPayoutPercents[levelNum - 1] || 0.5
-    };
-  };
+
 
   // Rank data mapping
   const rankLevels = [
@@ -1249,131 +1239,7 @@ const LandingPage = () => {
         </div>
       </motion.section>
 
-      {/* 9. Referral Program Section */}
-      <motion.section 
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-        variants={staggerContainer}
-        id="referrals" 
-        style={{ maxWidth: '1200px', margin: '0 auto 100px', padding: '0 20px' }}
-      >
-        <div style={{ textAlign: 'center', marginBottom: '60px' }}>
-          <motion.h2 variants={fadeInUp} className="lp-section-title">15-Level Referral Matrix</motion.h2>
-          <motion.p variants={fadeInUp} style={{ maxWidth: '700px', margin: '0 auto', fontSize: '1.05rem', color: 'var(--text-secondary)' }}>
-            Expand your network and unlock up to 15 degrees of downline ROI commission sharing.
-          </motion.p>
-        </div>
 
-        <div className="grid-cols-3" style={{ gap: '30px', alignItems: 'stretch' }}>
-          {/* Rules Summary */}
-          <motion.div 
-            variants={fadeInLeft}
-            whileHover="hover"
-            className="glass-card" 
-            style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}
-          >
-            <h3 style={{ fontSize: '1.35rem', color: 'var(--gold-light)', fontWeight: 800 }}>MLM Payout Qualifications</h3>
-            <p style={{ fontSize: '0.92rem', color: 'var(--text-secondary)', lineHeight: '1.6' }}>
-              Your active downline layers are bound directly to your sponsored directs and personal USDT stake amount.
-            </p>
-            
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-              <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-                <CheckCircle2 size={16} className="text-gold" />
-                <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>5% direct commission on buy volumes.</span>
-              </div>
-              <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-                <CheckCircle2 size={16} className="text-gold" />
-                <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Level index matches direct count (1 to 15).</span>
-              </div>
-              <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-                <CheckCircle2 size={16} className="text-gold" />
-                <span style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>Self-stake increases by $100 per level.</span>
-              </div>
-            </div>
-
-            <div style={{ background: 'rgba(224, 160, 30, 0.04)', border: '1px solid rgba(224,160,30,0.15)', padding: '16px', borderRadius: '10px', marginTop: 'auto' }}>
-              <h5 style={{ fontWeight: '600', color: 'var(--gold-light)', marginBottom: '4px' }}>Booster Reward Active</h5>
-              <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', lineHeight: '1.4' }}>
-                Have 5 of 15 directs active to unlock a 20% Booster Reward (10% to 1st upline, 5% to 2nd, 5% to 3rd uplines).
-              </p>
-            </div>
-          </motion.div>
-
-          {/* Interactive display */}
-          <motion.div 
-            variants={fadeInRight}
-            whileHover={{ borderColor: 'rgba(224, 160, 30, 0.22)', boxShadow: '0 8px 30px rgba(0,0,0,0.5)' }}
-            className="glass-card referrals-matrix-card" 
-            style={{ gridColumn: 'span 2', display: 'flex', flexDirection: 'column' }}
-          >
-            <div className="flex-between" style={{ marginBottom: '18px' }}>
-              <h3 style={{ fontSize: '1.25rem', fontWeight: 800 }}>Level Requirement Matrix</h3>
-              <span className="badge badge-info">BEP-20 Smart Contract Rules</span>
-            </div>
-
-            {/* Horizontal level tabs scrollable */}
-            <div style={{ display: 'flex', gap: '8px', overflowX: 'auto', paddingBottom: '10px', marginBottom: '20px', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
-              {Array.from({ length: 15 }, (_, i) => i + 1).map((lvl) => (
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  key={lvl}
-                  className="filter-tab"
-                  style={{
-                    padding: '6px 14px',
-                    borderRadius: '8px',
-                    background: activeLevelTab === lvl ? 'var(--gold-gradient)' : 'rgba(255, 255, 255, 0.03)',
-                    border: '1px solid',
-                    borderColor: activeLevelTab === lvl ? 'var(--gold-light)' : 'rgba(255,255,255,0.08)',
-                    color: activeLevelTab === lvl ? '#05070A' : 'var(--text-secondary)',
-                    fontWeight: '700',
-                    cursor: 'pointer'
-                  }}
-                  onClick={() => setActiveLevelTab(lvl)}
-                >
-                  L{lvl}
-                </motion.button>
-              ))}
-            </div>
-
-            <AnimatePresence mode="wait">
-              <motion.div 
-                key={activeLevelTab}
-                initial={{ opacity: 0, x: 12 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -12 }}
-                transition={{ duration: 0.25, ease: LUXURY_EASE }}
-                style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '20px', background: 'rgba(0,0,0,0.25)', padding: '24px', borderRadius: '12px' }}
-              >
-                <div>
-                  <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', textTransform: 'uppercase' }}>Yield Commission Rate</span>
-                  <h2 style={{ fontSize: '2.8rem', fontWeight: '800', color: 'var(--gold-light)', margin: '6px 0' }}>{getLevelReqs(activeLevelTab).percent}%</h2>
-                  <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
-                    Earn {getLevelReqs(activeLevelTab).percent}% of all daily Staking ROI dividends generated by members on Level {activeLevelTab}.
-                  </p>
-                </div>
-
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', justifyContent: 'center' }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.06)', paddingBottom: '8px' }}>
-                    <span style={{ color: 'var(--text-secondary)', fontSize: '0.88rem' }}>Required Self Stake:</span>
-                    <span style={{ fontWeight: '700' }}>${getLevelReqs(activeLevelTab).selfStake} USDT</span>
-                  </div>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.06)', paddingBottom: '8px' }}>
-                    <span style={{ color: 'var(--text-secondary)', fontSize: '0.88rem' }}>Required Directs:</span>
-                    <span style={{ fontWeight: '700' }}>{getLevelReqs(activeLevelTab).directs} Directs</span>
-                  </div>
-                  <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                    <span style={{ color: 'var(--text-secondary)', fontSize: '0.88rem' }}>Income source:</span>
-                    <span style={{ fontWeight: '700', color: 'var(--success)' }}>On-Chain Staking Yields</span>
-                  </div>
-                </div>
-              </motion.div>
-            </AnimatePresence>
-          </motion.div>
-        </div>
-      </motion.section>
 
       {/* 10. Rank & Salary System Section */}
       <motion.section 
