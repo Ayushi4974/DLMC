@@ -154,9 +154,8 @@ const FloatingCoin = () => {
         style={{ transformStyle: 'preserve-3d' }}
       >
         <div className="coin-token-inner">
-          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <span className="glow-text coin-token-title">Vertex Capital</span>
-            <span className="coin-token-sub">PROTOCOL</span>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
+            <span className="glow-text coin-token-title" style={{ textAlign: 'center' }}>Vertex Capital</span>
           </div>
         </div>
       </motion.div>

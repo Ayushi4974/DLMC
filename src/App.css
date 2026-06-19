@@ -1387,6 +1387,7 @@ a[href^="#"]:hover {
   color: var(--gold-light);
   text-shadow: 0 0 15px rgba(248, 217, 84, 0.55);
   letter-spacing: 1px;
+  text-align: center;
 }
 
 .coin-token-sub {
