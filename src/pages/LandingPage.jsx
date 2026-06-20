@@ -605,7 +605,7 @@ const LandingPage = () => {
               style={{ marginBottom: '24px', fontSize: '0.8rem', padding: '8px 22px', borderRadius: '50px' }}
             >
               <Sparkles size={14} style={{ marginRight: '6px', color: 'var(--gold-light)' }} />
-              Decentralised Legacy Management Corporation
+              Vertex Capital
             </motion.div>
  
             <motion.h1 
@@ -613,30 +613,20 @@ const LandingPage = () => {
               initial="hidden"
               animate="visible"
               className="lp-hero-title"
-              style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}
+              style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}
             >
-              <div style={{ overflow: 'hidden', paddingBottom: '4px' }}>
-                <motion.span
-                  variants={{
-                    hidden: { opacity: 0, y: "100%" },
-                    visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease: LUXURY_EASE } }
-                  }}
-                  style={{ display: 'inline-block' }}
-                >
-                  Decentralized Staking &
-                </motion.span>
-              </div>
-              <div style={{ overflow: 'hidden', paddingBottom: '4px' }}>
-                <motion.span
-                  variants={{
-                    hidden: { opacity: 0, y: "100%" },
-                    visible: { opacity: 1, y: 0, transition: { duration: 0.65, delay: 0.12, ease: LUXURY_EASE } }
-                  }}
-                  style={{ display: 'inline-block' }}
-                >
-                  Utility Minting Protocol
-                </motion.span>
-              </div>
+              <motion.span
+                variants={fadeInUp}
+                style={{ display: 'inline-block' }}
+              >
+                Decentralized Staking &
+              </motion.span>
+              <motion.span
+                variants={fadeInUp}
+                style={{ display: 'inline-block' }}
+              >
+                Utility Minting Protocol
+              </motion.span>
             </motion.h1>
 
             <motion.p 
@@ -767,7 +757,7 @@ const LandingPage = () => {
         <div className="grid-cols-2" style={{ gap: '40px', alignItems: 'center' }}>
           <motion.div variants={fadeInLeft}>
             <div className="badge badge-warning" style={{ marginBottom: '16px' }}>Project Background</div>
-            <h2 className="lp-section-title">About Decentralised Legacy Management Corporation</h2>
+            <h2 className="lp-section-title">About Vertex Capital</h2>
             <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: '1.7', marginBottom: '20px' }}>
                Vertex Capital was created to establish a sustainable, community-governed financial staking platform on the blockchain, eliminating middleman control and maximizing yield security.
             </p>
@@ -956,8 +946,8 @@ const LandingPage = () => {
             
             <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
               {[
-                { label: "Token Name", val: "Decentralised Legacy Management Corp" },
-                { label: "Symbol", val: "Vertex Capital" },
+                { label: "Token Name", val: "Vertex Capital" },
+                { label: "Symbol", val: "VERTEX" },
                 { label: "Network", val: "BSC (BEP-20)" },
                 { label: "Initial Price", val: "$0.10 USDT" },
                 { label: "Supply Model", val: "Mint on Buy / Burn on Sell" },
